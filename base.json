@@ -1,0 +1,157 @@
+[
+  {
+    "rule":"question_1",
+    "left": {"op": "and" , "arg": [
+                                    {"op": "==", "arg": ["solution" , 0]},
+                                    {"op": "==", "arg": ["jacket" , 0]}
+                                  ]},
+    "right":{"op": "set", "arg": ["jacket",{"op": "yes_or_no", "arg": "Вы носите пиджак?"}]}
+
+  },
+  {
+    "rule":"question_2",
+    "left": {"op": "and" , "arg": [
+                                    {"op": "==", "arg": ["solution" , 0]},
+                                    {"op": "==", "arg": ["trousers" , 0]}
+                                  ]},
+    "right":{"op": "set", "arg": ["trousers",{"op": "yes_or_no", "arg": "Вы носите брюки?"}]}
+
+  },
+  {
+    "rule":"question_3",
+    "left": {"op": "and" , "arg": [
+                                    {"op": "==", "arg": ["solution" , 0]},
+                                    {"op": "==", "arg": ["weather" , 0]}
+                                  ]},
+    "right":{"op": "set", "arg": ["weather",{"op": "question_weather", "arg": "Введите температуру воздуха?"}]}
+
+  },
+  {
+    "rule":"question_4",
+    "left": {"op": "and" , "arg": [
+                                    {"op": "==", "arg": ["solution" , 0]},
+                                    {"op": "==", "arg": ["length" , 0]}
+                                  ]},
+    "right":{"op": "set", "arg": ["length",{"op": "yes_or_no", "arg": "Длина юбки до колена?"}]}
+
+  },
+  {
+    "rule":"question_5",
+    "left": {"op": "and" , "arg": [
+                                    {"op": "==", "arg": ["solution" , 0]},
+                                    {"op": "==", "arg": ["tight_skirt" , 0]}
+                                  ]},
+    "right":{"op": "set", "arg": ["tight_skirt",{"op": "yes_or_no", "arg": "Зауженная юбка?"}]}
+
+  },
+  {
+    "rule":"question_6",
+    "left": {"op": "and" , "arg": [
+                                    {"op": "==", "arg": ["solution" , 0]},
+                                    {"op": "==", "arg": ["comfortable" , 0]}
+                                  ]},
+    "right":{"op": "set", "arg": ["comfortable",{"op": "yes_or_no", "arg": "Удобная обувь?"}]}
+
+  },
+  {
+    "rule":"question_7",
+    "left": {"op": "and" , "arg": [
+                                    {"op": "==", "arg": ["solution" , 0]},
+                                    {"op": "==", "arg": ["sport" , 0]}
+                                  ]},
+    "right":{"op": "set", "arg": ["sport",{"op": "yes_or_no", "arg": "Спортивная обувь?"}]}
+
+  },
+  {
+    "rule":"question_8",
+    "left": {"op": "and" , "arg": [
+                                    {"op": "==", "arg": ["solution" , 0]},
+                                    {"op": "==", "arg": ["hood" , 0]}
+                                  ]},
+    "right":{"op": "set", "arg": ["hood",{"op": "yes_or_no", "arg": "Есть капюшон?"}]}
+
+  },
+  {
+    "rule":"question_9",
+    "left": {"op": "and" , "arg": [
+                                    {"op": "==", "arg": ["solution" , 0]},
+                                    {"op": "==", "arg": ["warm" , 0]}
+                                  ]},
+    "right":{"op": "set", "arg": ["warm",{"op": "yes_or_no", "arg": "Теплая одежда?"}]}
+
+  },
+  {
+    "rule":"answer_1",
+    "left": {"op": "and" , "arg": [
+                                    {"op": "==", "arg": ["solution" , 0]},
+                                    {"op": "==", "arg": ["jacket" , "yes"]},
+                                    {"op": "==", "arg": ["trousers" , "yes"]}
+                                  ]},
+    "right":{"op": "set", "arg": ["answer_1",{"op": "found", "arg": ["solution" , 1]},
+                                  {"op": "print", "arg": ["Костюм" , "\nСтиль классический","\nПоход в театр или поход в университет"]}]}
+
+
+
+  },
+  {
+    "rule":"answer_2",
+    "left": {"op": "and" , "arg": [
+                                    {"op": "==", "arg": ["solution" , 0]},
+                                    {"op": "==", "arg": ["jacket" , "no"]},
+                                    {"op": "==", "arg": ["trousers" , "no"]}
+                                  ]},
+    "right":{"op": "set", "arg": ["answer_2",{"op": "found", "arg": ["solution" , 1]},
+                                  {"op": "print", "arg": ["Платье" , "\nСтиль классический","\nПоход в театр или поход в университет"]}]}
+
+
+  },
+  {
+    "rule":"answer_3",
+    "left": {"op": "and" , "arg": [
+                                    {"op": "==", "arg": ["solution" , 0]},
+                                    {"op": "==", "arg": ["weather" , 15]},
+                                    {"op": "==", "arg": ["length" , "yes"]},
+                                    {"op": "==", "arg": ["tight_skirt" , "no"]}
+    ]},
+    "right":{"op": "set", "arg": ["answer_3",{"op": "found", "arg": ["solution" , 1]},
+                                  {"op": "print", "arg": ["Юбка полусолнце" , "\nСтиль классический","\nПоход в театр или поход в университет"]}]}
+
+  },
+  {
+    "rule":"answer_4",
+    "left": {"op": "and" , "arg": [
+                                    {"op": "==", "arg": ["solution" , 0]},
+                                    {"op": "==", "arg": ["comfortable" , "yes"]},
+                                    {"op": "==", "arg": ["sport" , "yes"]}
+                                  ]},
+    "right":{"op": "set", "arg": ["answer_4",{"op": "found", "arg": ["solution" , 1]},
+                                  {"op": "print", "arg": ["Кроссовки" , "\nСтиль спортивный","\nПоход в спортзал или поход в университет"]}]}
+
+  },
+  {
+    "rule":"answer_5",
+    "left": {"op": "and" , "arg": [
+                                    {"op": "==", "arg": ["solution" , 0]},
+                                    {"op": "==", "arg": ["weather" , 2]},
+                                    {"op": "==", "arg": ["hood" , "yes"]},
+                                    {"op": "==", "arg": ["warm" , "yes"]}
+    ]},
+    "right":{"op": "set", "arg": ["answer_5",{"op": "found", "arg": ["solution" , 1]},
+                                  {"op": "print", "arg": ["Толстовка" , "\nСтиль спортивный","\nПоход в спортзал или поход в университет"]}]}
+
+
+  },
+  {
+    "rule":"answer_6",
+    "left": {"op": "and" , "arg": [
+                                    {"op": "==", "arg": ["solution" , 0]},
+                                    {"op": "==", "arg": ["hood" , "no"]},
+                                    {"op": "==", "arg": ["warm" , "no"]}
+    ]},
+    "right":{"op": "set", "arg": ["answer_6",{"op": "found", "arg": ["solution" , 1]},
+                                  {"op": "print", "arg": ["Футболка" , "\nСтиль спортивный","\nПоход в спортзал или поход в университет"]}]}
+
+
+  }
+]
+
